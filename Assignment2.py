@@ -1,5 +1,6 @@
 # Name: Sriya Chettebhaktula
 # Roll Number: 2019BCS-063
+
 # Problem Statement :
 # Write the code to calculate the spatial position with respect to frame {A} when the postion in frame {B} is represnted by 
 # [2,3,0] and b is rotationg aroung x axis by 30 degree , x axis by 30 degree , y axis by 30 degree. 
@@ -20,4 +21,5 @@ rotnY = np.array([[np.cos(angY), 0, np.sin(angY)],[0, 1, 0],[-np.sin(angY), 0, n
 rotnZ = np.array([[np.cos(angZ), -np.sin(angZ), 0],[np.sin(angZ), np.cos(angZ), 0],[0, 0, 1]])
 
 rotn = ((rotnX @ rotnY) @ rotnZ)
+#Outputs the new calculated coordinates
 print("New coordinates: ", rotn@coord)
